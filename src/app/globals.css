@@ -1,0 +1,186 @@
+:root {
+  --bg: #f6f5f1;
+  --surface: #ffffff;
+  --text: #1d2321;
+  --muted: #5f6964;
+  --border: #d9dbd4;
+  --accent: #2f5d50;
+  --pass-bg: #e3f0e8;
+  --pass-text: #1f5a3a;
+  --fail-bg: #f8e1dc;
+  --fail-text: #8a2d1b;
+  --neutral-bg: #ecebe6;
+  --neutral-text: #4d5550;
+  font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+}
+
+.site-header {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 16px 24px;
+  background: var(--accent);
+  color: #fff;
+}
+
+.site-title {
+  font-weight: 650;
+  font-size: 1.1rem;
+}
+
+.site-subtitle {
+  opacity: 0.75;
+  font-size: 0.85rem;
+}
+
+.site-main {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+h1 {
+  font-size: 1.35rem;
+  margin: 28px 0 6px;
+}
+
+.study-meta {
+  color: var(--muted);
+  margin: 0 0 16px;
+  max-width: 70ch;
+  line-height: 1.5;
+}
+
+.study-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 16px;
+  align-items: flex-end;
+  padding: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.study-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.study-form input,
+.study-form select {
+  font: inherit;
+  font-size: 0.95rem;
+  color: var(--text);
+  padding: 6px 8px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #fff;
+}
+
+.study-form button {
+  font: inherit;
+  padding: 8px 16px;
+  border: 0;
+  border-radius: 6px;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+}
+
+.error {
+  color: var(--fail-text);
+  background: var(--fail-bg);
+  padding: 10px 12px;
+  border-radius: 6px;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.strata-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.strata-table th,
+.strata-table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.strata-table thead th {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.strata-table .num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.strata-table tbody th {
+  font-weight: 500;
+}
+
+.overall-row {
+  background: #f1f4f2;
+}
+
+.overall-row th {
+  font-weight: 650;
+}
+
+.stratum-key {
+  margin-left: 8px;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.out-of-range {
+  color: var(--fail-text);
+  font-weight: 650;
+}
+
+.status {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  background: var(--neutral-bg);
+  color: var(--neutral-text);
+}
+
+.status-pass {
+  background: var(--pass-bg);
+  color: var(--pass-text);
+}
+
+.status-fail {
+  background: var(--fail-bg);
+  color: var(--fail-text);
+}
